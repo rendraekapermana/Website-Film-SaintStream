@@ -4,7 +4,7 @@ const IMAGE_URL = "https://image.tmdb.org/t/p/original";
 
 const heroCategory = document.getElementById("hero-category");
 const heroTitle = document.getElementById("hero-title");
-const hero = document.getElementById("hero");
+const heroImage = document.getElementById("hero-image");
 const heroMediaDetails = document.getElementById("hero-media-details");
 const heroEpisodes = document.getElementById("hero-episodes");
 const heroYear = document.getElementById("hero-year");
@@ -200,7 +200,7 @@ async function updateHero() {
   heroCategory.textContent = media.type;
   heroTitle.textContent = media.title;
   heroStory.textContent = media.overview;
-  hero.style.backgroundImage = `url('${IMAGE_URL}${media.backdrop_path}')`;
+  heroImage.style.backgroundImage = `url('${IMAGE_URL}${media.backdrop_path}')`;
 
   if (media.type === "Movie") {
     heroYear.textContent = media.year;
